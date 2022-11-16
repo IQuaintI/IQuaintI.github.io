@@ -17,6 +17,14 @@ header {
 /* a */
 a {
   text-decoration: none;
+  width: fit-content;
+}
+
+@media screen {
+  a {
+    width: fit-content;
+
+  }
 }
 a:visited {
   color: black;
@@ -48,6 +56,14 @@ a:hover {
   background-color: #f1f1f1;
 }
 
+@media screen and (max-width: 1000px) {
+  #projects {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border: 2px solid black;
+    background-color: #f1f1f1;
+  }
+}
 /* Project Cards */
 .projects-card {
   display: flex;
@@ -57,10 +73,22 @@ a:hover {
   padding: 2vh;
 }
 
+@media screen and (max-width: 1000px) {
+  .projects-card {
+    display: block;
+    margin: 5vh;
+    padding: 2vh;
+  }
+}
+
 .projects-card button {
   height: 5vh;
   width: 10vh;
   margin-top: 1vh;
+}
+
+@media screen {
+
 }
 
 .projects-card ul {
@@ -70,6 +98,15 @@ a:hover {
   flex-direction: row
 }
 
+
+@media screen { 
+  .projects-card ul {
+    list-style: none;
+    position: relative;
+    right: 4vh;
+  }
+  
+}
 /* Footer */
 footer {
   text-align: center;
