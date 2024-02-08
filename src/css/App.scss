@@ -1,0 +1,101 @@
+// @mixin
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  height: 20vh;
+  text-align: center;
+}
+
+// Header
+#header {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  height: 100vh; /* Or adjust to the desired header height */
+  text-align: center;
+  padding-top: 0%;
+  color: white;
+  justify-content: center;
+  position: relative; /* Added to act as a positioning context */
+}
+
+// Snap Scroll
+#scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh; /* Make the scroll container the height of the viewport */
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh; /* Each section fills the viewport */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+// Static Image
+
+@keyframes staticMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+#staticImage {
+  width: 100%;
+  height: 100%; /* Changed from 100vh to 100% */
+  background-image: url("/staticImage");
+  background-size: cover; /* Ensure the background covers the header area */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: staticMove 2000s linear infinite;
+}
+
+// Body
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent the body from scrolling */
+}
+
+// Hero
+
+#hero {
+  writing-mode: vertical-lr;
+  height: 100%;
+  justify-content: center;
+  font-size: 3rem;
+  letter-spacing: 4vh;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+a {
+  cursor: pointer;
+  color: black; /* Set the link text color to black */
+  text-decoration: none; /* Optional: Removes underline from links */
+
+  &:hover {
+    background-color: white;
+    color: black; /* Ensures text remains black on hover */
+  }
+  &:active {
+    background-color: black;
+    color: white; /* Text color white when active/clicked */
+  }
+}
