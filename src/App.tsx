@@ -4,7 +4,7 @@ import Works from "./components/Works";
 import "../src/css/App.scss";
 
 import Card from "./assets/Card";
-import Rx from "/rxSymbol.png";
+import Rx from "../public/rxSymbol.png";
 
 function App() {
   return (

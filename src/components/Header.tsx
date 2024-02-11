@@ -1,4 +1,4 @@
-import staticImage from '/staticImage.jpg';
+import staticImage from '../../public/staticImage.jpg'
 
 
 interface HeaderProps {
